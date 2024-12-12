@@ -5,7 +5,7 @@
 }
 
 .container {
-  height: 100%;
+  height: max-content;
   display: flex;
   position: absolute;
   top:10px;
@@ -101,4 +101,32 @@ hds-dropdown{
 
 .suggestions-list div:hover {
   background: #f0f0f0;
+}
+
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 933px) {
+  
+  
+
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* CSS */
+  .container{
+    width: 95%;
+
+  }
+  
 }
