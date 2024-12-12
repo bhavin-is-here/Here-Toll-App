@@ -1,42 +1,104 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
+*{
   margin: 0;
+  
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.container {
+  height: 100%;
+  display: flex;
+  position: absolute;
+  top:10px;
+  left:10px;
+  width: 22%;
+  z-index: 1;
+}
+.container1{
+  position: absolute;
+  z-index: 1;
+  top:400px;
+  left:10px;
+  width: 22%;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.loader-box{
+  position: absolute;
+  z-index:3;
+  top:400px;
+  left:10px;
+  width:22%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+
+hds-navbar-side *[slot='footer'] hr {
+  margin: 0 var(--hds-spacing-4);
+  border: solid var(--hds-foreground-divider);
+  border-width: 0 var(--hds-spacing-1px) var(--hds-spacing-1px) 0; 
+}
+
+hds-navbar-side {
+  display: block;
+  /* width: calc(var(--hds-spacing-10) + var(--hds-spacing-2)); */
+  width:100% !important;
+  /* height: 98%; */
+  height: max-content;
+  /* border:1px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
+}
+
+hds-navbar-side[expanded] {
+  width: 300px;
+  
+} 
+.side-panel-content{
+  padding: var(--hds-spacing-4) !important; 
+}
+
+.side-panel-content b{
+  color: #000;
+}
+
+
+.side-panel-content p{
+  color: #718096;
+}
+
+
+.selection-box{
+  margin-top: 10px;
+  display: flex;
+  
+}
+
+hds-dropdown{
+  margin-left: 20px;
+  
+}
+
+.suggestion-box{
+  position: relative;
+}
+.suggestions-list {
+  position: absolute;
+  top:0;
+  left:-15px;
+  z-index:3;
+  padding: 0;
+  margin: 5px 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow-y: scroll;
+}
+
+.suggestions-list div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestions-list div:hover {
+  background: #f0f0f0;
 }
